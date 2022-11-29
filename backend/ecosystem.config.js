@@ -24,7 +24,7 @@ module.exports = {
       repo: DEPLOY_REPO,
       path: DEPLOY_PATH,
       'pre-deploy-local': `scp ./.env* ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}`,
-      'post-deploy': 'cd ~/web-plus-pm2-deploy/source/backend/ && npm i && npm run build && pm2 restart ecosystem.config.js',
+      'post-deploy': 'cd ~/web-plus-pm2-deploy/backend/ && npm i && npm run build && pm2 restart ecosystem.config.js',
     },
   },
 };
